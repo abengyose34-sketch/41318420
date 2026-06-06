@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>41318420</title>
+<meta charset="utf-8">
+<script>
+function replaceImg(){
+    var imgOld = document.getElementsByTagName("img")[0];
+    imgOld.parentElement.removeChild(imgOld);
+
+    var imgNew = document.createElement("img");
+    imgNew.setAttribute("src","img/2.jpg");
+    imgNew.setAttribute("width","300");
+    imgNew.setAttribute("height","200");
+
+    var div = document.getElementsByTagName("div")[0];
+    document.body.insertBefore(imgNew, div);
+}
+</script>
+</head>
+<body>
+<img src="img/1.jpg" width="300" height="200">
+<div>
+<input type="submit" value="取代圖片" onclick="replaceImg()">
+</div>
+</body>
+</html>
